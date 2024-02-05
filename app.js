@@ -19,7 +19,7 @@ prevDom.onclick = function(){
 };
 
 let timeRunning = 1000;
-let timeAutoNext = 7000;
+let timeAutoNext = 10000;
 
 function showSlider(type){
     let itemSlider = document.querySelectorAll('.carousel .list .item');
