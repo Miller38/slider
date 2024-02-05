@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- metadatos -->
+    <meta name="description" content="Gallery Slider responsive html, css , javascript">
+    <meta name="keywords" content="html, css, js">
+    <meta name="author" content="Miller Gutierrez">
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/HTML_icon.ico" type="image/x-icon">
+
+    <!-- Título de la página -->
+    <title>Slider</title>
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Barra de navegación -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Info</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel">
+        <!-- Lista de elementos del carrusel -->
+        <div class="list">
+            <!-- Elemento 1 del carrusel -->
+            <div class="item">
+                <img src="images/img1.jpg" alt="">
+                <!-- Contenido del elemento -->
+                <div class="content">
+                    <div class="author">Miller</div>
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">ANIMAL</div>
+                    <div class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur rem rerum itaque
+                        magnam nulla autem excepturi officia corrupti tempora impedit!</div>
+
+                    <!-- Botones de acción -->
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repetir la estructura para los elementos restantes del carrusel -->
+            <!-- Elemento 2 -->
+            <div class="item">
+                <img src="images/img2.jpg" alt="">
+                <div class="content">
+                    <div class="author">Miller</div>
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">ANIMAL</div>
+                    <div class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur rem rerum itaque
+                        magnam nulla autem excepturi officia corrupti tempora impedit!</div>
+
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="item">
+                <img src="images/img3.jpg" alt="">
+                <div class="content">
+                    <div class="author">Miller</div>
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">ANIMAL</div>
+                    <div class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur rem rerum itaque
+                        magnam nulla autem excepturi officia corrupti tempora impedit!</div>
+
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="item">
+                <img src="images/img4.jpg" alt="">
+                <div class="content">
+                    <div class="author">Miller</div>
+                    <div class="title">DESIGN SLIDER</div>
+                    <div class="topic">ANIMAL</div>
+                    <div class="des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur rem rerum itaque
+                        magnam nulla autem excepturi officia corrupti tempora impedit!</div>
+
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="images/img1.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="des">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img2.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="des">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img3.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="des">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/img4.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="des">
+                        Description
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+
+        <div class="time"></div>
+    </div>
+
+
+
+    <!-- Inclusión del archivo de script -->
+    <script src="app.js"></script>
+</body>
+
+</html>

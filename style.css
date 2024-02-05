@@ -1,0 +1,333 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: 'Poppins', sans-serif; /* Uso de la fuente Poppins */
+    background-color: #000; /* Color de fondo negro */
+    color: #eee; /* Color del texto blanco */
+    margin: 0; /* Sin márgenes */
+    font-size: 12px; /* Tamaño de fuente predeterminado */
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none; /* Sin decoración de subrayado para los enlaces */
+    color: #eee; /* Color del texto blanco */
+}
+
+/* Estilos para la cabecera del documento */
+header {
+    width: 1140px; /* Ancho fijo de la cabecera */
+    max-width: 80%; /* Ancho máximo del 80% del contenedor padre */
+    margin: auto; /* Centrado horizontal */
+    height: 50px; /* Altura de la cabecera */
+    display: flex; /* Uso de flexbox para alinear elementos */
+    align-items: center; /* Alineación vertical de los elementos en el centro */
+    position: relative; /* Posición relativa para z-index */
+    z-index: 100; /* Z-index para la superposición de elementos */
+}
+
+/* Estilos para los enlaces dentro de la cabecera */
+header a {
+    margin-right: 40px; /* Espaciado a la derecha entre enlaces */
+}
+
+/* Estilos para el carousel */
+.carousel {
+    width: 100vw; /* Ancho del 100% de la ventana */
+    height: 100vh; /* Altura del 100% de la ventana */
+    overflow: hidden; /* Ocultar desbordamiento */
+    margin-top: -50px; /* Desplazamiento hacia arriba para superponer con la cabecera */
+    position: relative; /* Posición relativa para los elementos absolutos internos */
+}
+
+/* Estilos para los elementos de la lista del carousel */
+.carousel .list .item {
+    position: absolute; /* Posición absoluta para la superposición */
+    inset: 0 0 0 0; /* Ajuste absoluto a los bordes del contenedor */
+}
+
+/* Estilos para las imágenes dentro de los elementos del carousel */
+.carousel .list .item img {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+    object-fit: cover; /* Ajuste de objeto para cubrir completamente el contenedor */
+}
+
+/* Estilos para el contenido dentro de los elementos del carousel */
+.carousel .list .item .content {
+    position: absolute; /* Posición absoluta para la superposición del contenido */
+    top: 20%; /* Espaciado superior del 20% del contenedor padre */
+    width: 1140px; /* Ancho fijo del contenido */
+    max-width: 80%; /* Ancho máximo del 80% del contenedor padre */
+    left: 50%; /* Centrado horizontal del contenido */
+    transform: translateX(-50%); /* Ajuste horizontal del 50% para centrado */
+    padding-right: 30%; /* Espaciado del lado derecho del contenido */
+    box-sizing: border-box; /* Modelo de caja que incluye el relleno en el ancho total */
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .content .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .content .title,
+.carousel .list .item .content .topic {
+    font-weight: bold;
+    font-size: 5em;
+    list-style: 1.3em;
+}
+
+.carousel .list .item .content .topic {
+    color: #f1683a;
+}
+
+.carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.carousel .list .item .content button {
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+} 
+
+.carousel .list .item .content button:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid#eee;
+}
+
+/* thumbnail */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: bold;
+}
+
+/* Arrows */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+} 
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: #555;
+}
+
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title {
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .topic {
+    animation-delay: 1.4s;
+}
+
+.carousel .list .item:nth-child(1) .des {
+    animation-delay: 1.6s;
+}
+
+.carousel .list .item:nth-child(1) .buttons {
+    animation-delay: 1.8s;
+}
+
+/* effect next click */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    to{
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail {
+    transform: translateX(150px);
+}
+
+/* effect prev click */
+.carousel.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to{
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .buttons {
+    animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+    pointer-events: none;
+}
+
+/* time */
+.time {
+    width: 100%;
+    height: 3px;
+    background-color: #f1683a;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to{
+        width: 0;
+    }
+}
+
+@media screen  and (max-width: 768px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 30px;
+    }
+}
